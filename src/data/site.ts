@@ -14,7 +14,7 @@ export const site = {
   whatsapp: 'https://wa.me/442031938835',
   address: ['5 St. John’s Lane', 'London EC1M 4BH'],
   location: 'London',
-  founded: 2021,
+  founded: 2018,
   hours: 'Monday to Friday, 9:00 – 18:00 UK time',
   responseTime: 'within one working day',
   year: new Date().getFullYear(),

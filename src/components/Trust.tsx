@@ -8,7 +8,7 @@ const years = new Date().getFullYear() - site.founded;
 const numbers = [
   { v: '50+', k: 'Products shipped' },
   { v: `${years} yrs`, k: `In business since ${site.founded}` },
-  { v: String(projects.length), k: 'Case studies published' },
+  { v: String(projects.length) + "+", k: 'Case studies published' },
   { v: '100%', k: 'Code owned by clients' },
 ];
 
