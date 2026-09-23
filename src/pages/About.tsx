@@ -7,6 +7,7 @@ import { aboutHero, numbers, story, principles, whoWeWorkWith, team } from '../d
 import { processSteps } from '../data/content';
 import { accreditations } from '../data/trust';
 import { site, bookCallLink } from '../data/site';
+import { DownloadProfileButton, sampleProfile } from '../features/company-profile';
 
 const IMG = `${import.meta.env.BASE_URL}img/`;
 
@@ -140,6 +141,10 @@ export function About() {
                 <a href={`mailto:${site.email}`}>{site.email}</a> · <a href={site.phoneHref}>{site.phone}</a> · <a href={site.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
               </p>
               <p><Link to="/contact">Contact form and map →</Link></p>
+              <p style={{ marginTop: 18 }}>
+                <DownloadProfileButton data={sampleProfile} className="btn btn-ghost btn-sm" />
+              </p>
+              <p><Link to="/company-profile">Preview the company profile →</Link></p>
             </div>
           </div>
         </div>

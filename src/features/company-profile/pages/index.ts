@@ -1,0 +1,16 @@
+export { CoverPage } from './CoverPage';
+export { ContentsPage } from './ContentsPage';
+export { CeoPage } from './CeoPage';
+export { AboutPage } from './AboutPage';
+export { JourneyPage } from './JourneyPage';
+export { ServicesPage, ServicesPageTwo } from './ServicesPage';
+export { AiPage } from './AiPage';
+export { AiDepthPage } from './AiDepthPage';
+export { IndustriesPage } from './IndustriesPage';
+export { ProcessPage } from './ProcessPage';
+export { CaseStudiesPage, CaseStudiesPageTwo } from './CaseStudiesPage';
+export { PortfolioPage, PortfolioPageTwo } from './PortfolioPage';
+export { ClientsPage } from './ClientsPage';
+export { TeamPage } from './TeamPage';
+export { QualityPage } from './QualityPage';
+export { ContactPage } from './ContactPage';

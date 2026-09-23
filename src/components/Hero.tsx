@@ -14,7 +14,7 @@ export function Hero() {
           </h1>
           <p className="lede">
             AI features, web platforms, mobile apps, 3D experiences, Shopify stores, marketplaces and betting platforms —
-            engineered by a small senior team, scoped in writing, shipped on a date, and still standing when the tenth
+            scoped in writing, shipped on a date, and still standing when the tenth
             feature lands.
           </p>
           <div className="hero-actions">

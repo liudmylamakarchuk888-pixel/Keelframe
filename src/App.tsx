@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Careers } from './pages/Careers';
+import { CompanyProfile } from './pages/CompanyProfile';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
+        <Route path="/company-profile" element={<CompanyProfile />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/:section" element={<Home />} />

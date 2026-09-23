@@ -9,6 +9,8 @@ npm install
 npm run dev        # http://localhost:5173
 npm run build      # production build → dist/
 npm run preview    # serve the production build locally
+
+npm run render:profile   # render the company-profile PDF → out/company-profile.pdf
 ```
 
 Requires Node 18+.
@@ -19,6 +21,8 @@ Requires Node 18+.
 index.html                 page shell, Google Fonts links, meta description
 public/img/                portfolio screenshots (.webp) and team photos
 public/logo/               logo files (mark, mono mark, lockup)
+public/fonts/              Inter and Space Grotesk TTFs — the PDF only (react-pdf cannot read WOFF2)
+public/img-pdf/            JPEG twins of the portfolio shots, plus the office photo — the PDF only
 reference/                 source material for portfolio entries (screenshots, write-ups) — not shipped
 src/
   main.tsx                 entry point
@@ -40,7 +44,94 @@ src/
     Careers.tsx            the Careers page
     Privacy.tsx            the privacy policy (linked from the footer)
     Terms.tsx              the terms of service (linked from the footer)
+    CompanyProfile.tsx     /company-profile — previews and downloads the PDF
+  features/
+    company-profile/       the downloadable 19-page company profile (see below)
+scripts/
+  render-profile.tsx       renders the profile to out/company-profile.pdf
 ```
+
+## The company profile PDF
+
+A 19-page A4 company profile, generated in the browser with
+[@react-pdf/renderer](https://react-pdf.org) and saved as
+`keelframe-company-profile.pdf`. It is a finished document, not a template:
+it has no placeholders and nothing is left for the reader to fill in.
+
+| Page | | Page | |
+|---|---|---|---|
+| 1 | Cover | 11 | 07 How We Work |
+| 2 | Contents | 12–13 | 08 Case Studies (4, with screenshots) |
+| 3 | 01 Message from the CEO | 14–15 | 09 Selected Portfolio (all 18 projects) |
+| 4 | 02 About Us | 16 | 10 Clients & Partners |
+| 5 | 03 Our Journey | 17 | 11 Leadership Team |
+| 6–7 | 04 Services (all 11) | 18 | 12 Quality & Why Choose Us |
+| 8–9 | 05 AI Development | 19 | 13 Contact Us |
+| 10 | 06 Industries & Technology | | |
+
+```
+src/features/company-profile/
+  types.ts                 the CompanyProfile shape — every field optional, each noted with the
+                           length the layout was designed for
+  sampleProfile.ts         the data the profile ships with, pulled from src/data/* where it exists
+  theme.ts                 colours, fonts, type scale, spacing, the A4 frame
+  fonts.ts                 Font.register calls (a browser URL, or an absolute path under Node)
+  assets.ts                image paths, resolved for the browser or the render script
+  sections.ts              the thirteen numbered sections — drives the contents page, the running
+                           heads and the footer page numbers, so the three cannot disagree
+  qr.ts                    builds the back-cover QR code as a PNG data URL
+  components/              PageShell, SectionHeader, Card, Chip, StatTile, BulletList, IconTile,
+                           BrandMark, Monogram, Wordmark, CertBadge, ImageOrPlaceholder, Divider, Ph
+  pages/                   one file per page, Cover through Contact
+  CompanyProfilePDF.tsx    the <Document>
+  ProfilePreview.tsx       PDFViewer wrapper — only ever imported lazily
+  DownloadProfileButton.tsx
+```
+
+**Editing the content.** Everything the document prints comes from one object in
+`sampleProfile.ts`. Facts that already live in `src/data/*` are imported rather
+than retyped — the eleven services, the eighteen portfolio projects, the team,
+the testimonials, the accreditations — so the PDF and the site cannot drift
+apart. A field left empty would render as a bracketed placeholder in the accent
+colour (`[Company Name]`); nothing is currently empty, and it should stay that
+way, so check with `npm run render:profile` after any edit.
+
+**Where the studio has no asset**, the layout uses a designed alternative rather
+than an empty frame: team members and testimonial authors get their initials set
+in Space Grotesk (`Monogram`), clients and partners get a typeset wordmark
+(`Wordmark` — we hold no licence to redraw anyone's logo), and certifications get
+a drawn ring badge (`CertBadge`). Drop a real `photoUrl` or `imageUrl` into the
+data and the component switches to it with no layout change.
+
+**Images.** react-pdf reads PNG and JPEG only, so the `.webp` portfolio
+screenshots the website uses are kept as JPEG twins in `public/img-pdf/`.
+Regenerate them after adding a project:
+
+```bash
+python -c "
+import glob, os
+from PIL import Image
+os.makedirs('public/img-pdf', exist_ok=True)
+for p in glob.glob('public/img/*.webp'):
+    im = Image.open(p).convert('RGB')
+    w, h = im.size
+    if w > 900: im = im.resize((900, round(h*900/w)), Image.LANCZOS)
+    im.save('public/img-pdf/' + os.path.basename(p)[:-5] + '.jpg', quality=82, optimize=True)
+"
+```
+
+**Where it appears.** `/#/company-profile` previews the PDF in the browser; the
+About page and the footer link to it and offer the download. react-pdf and the
+six embedded fonts come to ~1.2 MB, so both the viewer and the renderer load on
+demand — a visitor who never asks for the PDF never downloads them.
+
+**Checking a change.** `npm run render:profile` writes `out/company-profile.pdf`.
+It must come out at exactly 19 A4 pages with nothing clipped: every page is
+`wrap={false}` inside a fixed A4 frame, so text that no longer fits is cut off
+rather than pushed onto a twentieth page. Open the file, or render the pages to
+images (`pdftoppm -r 72 -png out/company-profile.pdf page`) and check each one.
+Page numbers live in `sections.ts` — add a page there and in
+`CompanyProfilePDF.tsx` together, or the contents page will lie.
 
 ## How the call-to-action buttons work
 
@@ -107,11 +198,16 @@ The site is filled in so it can be shown to clients. The following is demo conte
 - [ ] **Careers** (`src/data/careers.ts`) — the three open roles and the benefits are invented.
 - [ ] **Social links** (`src/data/site.ts`) — assumed handles (`/keelframe`); confirm or replace.
 - [ ] **Privacy policy and Terms** (`src/pages/Privacy.tsx`, `src/pages/Terms.tsx`) — generic UK wording; have both reviewed.
+- [ ] **Company profile PDF — headline figures** (`src/features/company-profile/sampleProfile.ts`) — 250+ projects delivered, 120+ engineers & specialists, 15 countries served, and the team breakdown (72/16/14/18) were supplied for this document and are not derived from this repo. Note that the site's own trust strip quotes 50+ products shipped and `projects.length` portfolio projects; decide which set is the public one and make the two agree.
+- [ ] **Company profile PDF — other assumptions** — the website domain is inferred from the contact address; the 2021 and 2023 milestones are inferred from the portfolio; the CEO name, two of the three testimonials and the accreditations inherit the demo content already flagged in `about.ts`, `content.ts` and `trust.ts`. The office photograph on page 4 was supplied for this profile — confirm you hold the rights to it.
 - [ ] **Tech stacks in the case studies** (`src/data/projects.ts → stack`) — Beretta and Bay Smokes come from the write-ups in `reference/`; the other sixteen are inferred from the scope text. Confirm each.
 
 ## Before going live — checklist
 
-- [ ] Replace `hello@keelframe.com` in `src/data/site.ts`
+- [ ] Replace `hello@keelframe.org` in `src/data/site.ts`
+- [ ] Confirm the website domain the company profile PDF prints (`keelframe.org`)
+- [ ] Reconcile the company profile PDF's headline figures with the website's
+- [ ] Optional: add real headshots, client logos and certification marks — the profile falls back to initials, wordmarks and drawn badges without them
 - [ ] Decide how the contact form is delivered (`formEndpoint`) and whether to use a booking tool (`bookingUrl`)
 - [ ] Work through the demo-content list above
 - [ ] Check the FAQ answers and engagement models match how you actually work (pricing, minimums, support period)

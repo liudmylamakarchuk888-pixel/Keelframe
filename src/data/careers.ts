@@ -5,7 +5,7 @@
 // "no open roles right now" note) before the site goes live.
 
 export const careersLede =
-  'Keelframe is a small senior team that scopes in writing, demos every week and stays after launch. We hire slowly, pay properly, and do not run timesheets.';
+  'Keelframe is a powerful senior team that scopes in writing, demos every week and stays after launch. We hire slowly, pay properly, and do not run timesheets.';
 
 export const culture = [
   'Every engagement here is led by the person who scoped it, so you own a product end to end: the discovery call, the written scope, the pilot in week one, the weekly demos and what happens after launch. No hand-offs to a delivery team, no account managers between you and the client.',

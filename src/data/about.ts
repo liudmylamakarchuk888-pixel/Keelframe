@@ -2,14 +2,14 @@
 
 export const aboutHero = {
   eyebrow: 'About Keelframe',
-  title: 'A small senior team that ships.',
+  title: 'A powerful senior team that ships.',
   lede:
     'Keelframe is a London product engineering studio built by founders, for founders. We design and build AI features, web platforms, mobile apps, 3D experiences, Shopify stores, marketplaces and betting platforms — scoped in writing, delivered on a date, and owned by you from the first commit.',
 };
 
 export const numbers = [
   { v: '50+', k: 'Products shipped' },
-  { v: '2021', k: 'Founded' },
+  { v: '2018', k: 'Founded' },
   { v: '100%', k: 'Code owned by clients' },
   { v: 'London', k: 'HQ · remote worldwide' },
 ];

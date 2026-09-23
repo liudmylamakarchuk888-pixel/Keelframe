@@ -38,6 +38,7 @@ export function Footer() {
               <li><Link to="/clients">Clients</Link></li>
               <li><Link to="/process">How we work</Link></li>
               <li><Link to="/careers">Careers</Link></li>
+              <li><Link to="/company-profile">Company profile (PDF)</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>

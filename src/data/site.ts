@@ -6,8 +6,8 @@
 export const site = {
   name: 'Keelframe',
   title: 'Keelframe — Custom software and AI for founders',
-  tagline: 'A product engineering studio. Small senior team, fixed scopes, software that lasts.',
-  email: 'hello@keelframe.com', // TODO: replace with your real address
+  tagline: 'A product engineering studio. Powerful senior team, fixed scopes, software that lasts.',
+  email: 'hello@keelframe.org', // TODO: replace with your real address
   phone: '+19174750768',
   phoneHref: 'tel:+442031938835',
   // DEMO: WhatsApp is assumed to be on the office number — replace with the real business number.

@@ -72,7 +72,7 @@ export function Portfolio() {
         <SectionHead
           eyebrow="Portfolio"
           title="Products we have shipped."
-          text={`${projects.length} products across mobile, web, 3D, e-commerce, Web3 and gaming. Open any of them for the challenge, the scope of work, the tech stack and what happened after launch.`}
+          text={`${projects.length} representative  products across mobile, web, 3D, e-commerce, Web3 and gaming. Open any of them for the challenge, the scope of work, the tech stack and what happened after launch.`}
         />
 
         <div className="filters" role="group" aria-label="Filter portfolio">
