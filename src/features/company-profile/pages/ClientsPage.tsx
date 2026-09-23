@@ -66,7 +66,7 @@ export function ClientsPage({ profile }: { profile: CompanyProfile }) {
       <SectionHeader
         number="10"
         eyebrow="Clients & Partners"
-        title={'Trusted by organizations\nthat depend on technology.'}
+        title={'Trusted by organisations\nthat depend on technology.'}
         gap={6}
       />
 

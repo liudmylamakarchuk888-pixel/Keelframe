@@ -26,7 +26,7 @@ export function Hero() {
             </Link>
           </div>
           <div className="hero-facts">
-            <div className="fact"><strong>Senior engineers only</strong>The people on the call are the people who write the code.</div>
+            <div className="fact"><strong>Senior-led, always</strong>The people on the call are the people who write the code.</div>
             <div className="fact"><strong>Scope in writing first</strong>What we build, when, and what it costs — before anything starts.</div>
             <div className="fact"><strong>Real software in week one</strong>A working pilot deliverable before you commit to the full build.</div>
           </div>

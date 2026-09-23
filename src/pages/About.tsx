@@ -96,7 +96,7 @@ export function About() {
       {/* ---- team ---- */}
       <section className="section" id="team">
         <div className="wrap">
-          <SectionHead eyebrow="The team" title="The people on the call are the people who build." text="Small by design. Every engagement is led by a senior engineer or designer who stays on it from scope to launch." />
+          <SectionHead eyebrow="The team" title="The people on the call are the people who build." text="Senior-led by design. Every engagement is led by a senior engineer or designer who stays on it from scope to launch." />
           <ul className="team">
             {team.map((m) => (
               <li className={`member${m.placeholder ? '' : ' real'}`} key={m.name + m.role}>

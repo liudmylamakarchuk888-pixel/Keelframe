@@ -6,7 +6,7 @@
 export const site = {
   name: 'Keelframe',
   title: 'Keelframe — Custom software and AI for founders',
-  tagline: 'A product engineering studio. Powerful senior team, fixed scopes, software that lasts.',
+  tagline: 'A product engineering studio. Seasoned senior team, fixed scopes, software that lasts.',
   email: 'hello@keelframe.org', // TODO: replace with your real address
   // phone: '+19174750768',
   // phoneHref: 'tel:+442031938835',
@@ -102,6 +102,6 @@ export const marquee = [
   'Pilot in week one',
   'Weekly demos',
   'You own the code',
-  'Senior engineers only',
+  'Senior-led, always',
   'Built to hold',
 ];

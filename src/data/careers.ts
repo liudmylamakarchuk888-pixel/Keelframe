@@ -5,7 +5,7 @@
 // "no open roles right now" note) before the site goes live.
 
 export const careersLede =
-  'Keelframe is a powerful senior team that scopes in writing, demos every week and stays after launch. We hire slowly, pay properly, and do not run timesheets.';
+  'Keelframe is a seasoned senior team that scopes in writing, demos every week and stays after launch. We hire slowly, pay properly, and do not run timesheets.';
 
 export const culture = [
   'Every engagement here is led by the person who scoped it, so you own a product end to end: the discovery call, the written scope, the pilot in week one, the weekly demos and what happens after launch. No hand-offs to a delivery team, no account managers between you and the client.',
@@ -14,7 +14,7 @@ export const culture = [
 
 export const benefits = [
   { n: '01', title: 'Remote-first', text: 'Work from anywhere in the UK or EU. The London desk is there if you want it, never required.' },
-  { n: '02', title: 'Senior only', text: 'Everyone here has shipped production software for years. You will not be managing juniors, or managed like one.' },
+  { n: '02', title: 'Senior-led', text: 'A senior engineer or designer leads every project and owns it end to end. You will be mentoring the people coming up behind you, not managed like one of them.' },
   { n: '03', title: 'No timesheets', text: 'We sell outcomes, not hours. Nobody tracks your time and nobody expects late nights.' },
   { n: '04', title: '28 days holiday', text: 'Plus UK bank holidays, and the studio closes between Christmas and New Year on top.' },
   { n: '05', title: '£2,000 learning budget', text: 'Courses, conferences, books and hardware, every year, with no approval form.' },

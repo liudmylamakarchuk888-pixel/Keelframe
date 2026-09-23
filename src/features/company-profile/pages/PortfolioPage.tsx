@@ -93,7 +93,7 @@ export function PortfolioPageTwo({ profile }: { profile: CompanyProfile }) {
         number="09"
         eyebrow="Selected Portfolio · continued"
         title="Commerce, 3D, Web3 and betting."
-        lead="High-volume Shopify storefronts, a real-time product configurator, an on-chain treasury platform and a licensed casino."
+        lead="A longevity platform, high-volume Shopify storefronts, a real-time product configurator, an on-chain treasury platform and an online casino."
         gap={5.6}
       />
       <Grid items={(profile.portfolio ?? []).slice(9, 18)} />

@@ -27,7 +27,7 @@ export function Careers() {
           <div className="story">
             <div>
               <p className="eyebrow">How it feels</p>
-              <h2>Small team, whole products.</h2>
+              <h2>One team, whole products.</h2>
             </div>
             <div className="story-text">
               {culture.map((p, i) => <p key={i}>{p}</p>)}

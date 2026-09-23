@@ -2,14 +2,14 @@
 
 export const aboutHero = {
   eyebrow: 'About Keelframe',
-  title: 'A powerful senior team that ships.',
+  title: 'A seasoned senior team that ships.',
   lede:
     'Keelframe is a London product engineering studio built by founders, for founders. We design and build AI features, web platforms, mobile apps, 3D experiences, Shopify stores, marketplaces and betting platforms — scoped in writing, delivered on a date, and owned by you from the first commit.',
 };
 
 export const numbers = [
-  { v: '50+', k: 'Products shipped' },
-  { v: '2018', k: 'Founded' },
+  { v: '250+', k: 'Projects delivered' },
+  { v: '120+', k: 'Engineers & specialists' },
   { v: '100%', k: 'Code owned by clients' },
   { v: 'London', k: 'HQ · remote worldwide' },
 ];
@@ -17,12 +17,12 @@ export const numbers = [
 export const story = [
   'Most agencies are built to sell hours. The pitch is done by senior people, the work is done by whoever is free, and the scope is discovered as the invoices arrive. We started Keelframe because we had been on the other side of that table and did not want to run a studio that way.',
   '**A ship is a keel and its frames — everything else is bolted on.** That is how we think about software. Get the structure right early, in writing, with the people who will actually build it, and the tenth feature ships as smoothly as the first. Skip it and every release gets slower until someone proposes a rewrite.',
-  'So the studio runs on a few fixed habits: a written scope before anything starts, a working pilot in week one, a demo every week, and code that lives in your repositories and your cloud accounts from day one. Fifty-plus products later, that is still the whole method.',
+  'So the studio runs on a few fixed habits: a written scope before anything starts, a working pilot in week one, a demo every week, and code that lives in your repositories and your cloud accounts from day one. Two hundred and fifty projects later, that is still the whole method.',
 ];
 
 export const principles = [
   { n: '01', title: 'Scope in writing, first', text: 'What we will build, when, what it costs and what is out — agreed before anything starts, and the document is the price.' },
-  { n: '02', title: 'Senior people only', text: 'The engineers and designers on the discovery call are the ones who do the work. No bait-and-switch to a junior team after signing.' },
+  { n: '02', title: 'Senior-led, always', text: 'A senior engineer or designer leads every project, and the people on the discovery call are the ones who do the work. No bait-and-switch after signing.' },
   { n: '03', title: 'Working software every week', text: 'A build you can click and a short written update every week, from week one. Progress you can forward to your board.' },
   { n: '04', title: 'You own everything', text: 'Repositories, cloud accounts, app-store listings and design files are yours from day one. Leave whenever you like and take it all with you.' },
   { n: '05', title: 'We push back', text: 'If a feature does not prove the core idea, we say so. A smaller product that launches beats a bigger one that never does.' },

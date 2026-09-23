@@ -164,7 +164,7 @@ export interface ProfileAi {
   capabilities?: ProfileAiCapability[];
   /** 6 layers of the stack. */
   layers?: ProfileAiLayer[];
-  /** 3 deployment options — cloud API, private VPC, on-premise. */
+  /** 3 deployment options — cloud API, private VPC, on-premises. */
   deployment?: ProfilePromise[];
   /** 4 bullets on how models are evaluated and kept honest. */
   evaluation?: string[];

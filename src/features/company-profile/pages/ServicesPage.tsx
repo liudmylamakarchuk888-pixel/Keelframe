@@ -76,7 +76,7 @@ export function ServicesPageTwo({ profile }: { profile: CompanyProfile }) {
         number="04"
         eyebrow="Services · continued"
         title="Specialist practices."
-        lead="Commerce, regulated markets, real-time 3D, on-chain products and two-sided marketplaces — the work that needs a team who has shipped it before."
+        lead="Commerce, regulated markets, real-time 3D, on-chain products and two-sided marketplaces — the work that needs a team that has shipped it before."
         gap={6}
       />
 
@@ -88,7 +88,7 @@ export function ServicesPageTwo({ profile }: { profile: CompanyProfile }) {
               One project, several services
             </Text>
             <Text style={{ marginTop: mm(2), fontSize: 7.8, lineHeight: 1.42, color: color.ink2 }}>
-              Most builds use three or four of these at once. We scope them as one project with one
+              Most builds use two or three of these at once. We scope them as one project with one
               team, so nothing is duplicated or lost in a hand-off.
             </Text>
           </Card>

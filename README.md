@@ -159,7 +159,7 @@ Build these links with `contactLink({ intent, service, re })` from `src/data/sit
 - **Portfolio images** — 1600×1067 (3:2) `.webp`. For a plain browser screenshot, frame it the way the Rejuve.AI, Beretta, Bay Smokes and Petify tiles were made: a brand-tinted background with the screenshot in a browser window.
 - **Add / edit a service** — `src/data/services.ts`. `who` is the "For" line under the intro. The jump-to chips, the footer list, the contact form's "What do you need?" list and the chooser table columns all follow this file (`short` is the column label; match it in `content.ts → chooserColumns`).
 - **Engagement models** — `src/data/content.ts → engagementModels` (shown under the process steps).
-- **Trust strip** — `src/data/trust.ts` (client names and accreditations). The numbers come from `site.founded` and the project count.
+- **Trust strip** — `src/data/trust.ts` (client names and accreditations). The four numbers are at the top of `src/components/Trust.tsx` and must match the company profile's headline figures.
 - **Testimonials** — `src/data/content.ts → testimonials`. Set `placeholder: true` on a quote to show it with a dashed border and a "replace me" label.
 - **Team** — `src/data/about.ts → team`. Add `photo: 'name.jpg'` (file in `public/img/`) to replace the initials avatar.
 - **Careers** — `src/data/careers.ts`. Roles apply by email (subject line is set automatically). Empty the `roles` array to show "0 open positions".
@@ -197,15 +197,14 @@ The site is filled in so it can be shown to clients. The following is demo conte
 - [ ] **Careers** (`src/data/careers.ts`) — the three open roles and the benefits are invented.
 - [ ] **Social links** (`src/data/site.ts`) — assumed handles (`/keelframe`); confirm or replace.
 - [ ] **Privacy policy and Terms** (`src/pages/Privacy.tsx`, `src/pages/Terms.tsx`) — generic UK wording; have both reviewed.
-- [ ] **Company profile PDF — headline figures** (`src/features/company-profile/sampleProfile.ts`) — 250+ projects delivered, 120+ engineers & specialists, 15 countries served, and the team breakdown (72/16/14/18) were supplied for this document and are not derived from this repo. Note that the site's own trust strip quotes 50+ products shipped and `projects.length` portfolio projects; decide which set is the public one and make the two agree.
-- [ ] **Company profile PDF — other assumptions** — the website domain is inferred from the contact address; the 2021 and 2023 milestones are inferred from the portfolio; the CEO name, two of the three testimonials and the accreditations inherit the demo content already flagged in `about.ts`, `content.ts` and `trust.ts`. The office photograph on page 4 was supplied for this profile — confirm you hold the rights to it.
+- [ ] **Headline figures** (`src/features/company-profile/sampleProfile.ts`) — 250+ projects delivered, 120+ engineers & specialists, 15 countries served, and the team breakdown (72/16/14/18, which sums to the 120+) were supplied and are not derived from this repo. The website now quotes the same set: `src/components/Trust.tsx` (home strip), `src/data/about.ts → numbers` (About strip) and the last line of `about.ts → story`. Change one and you must change all four.
+- [ ] **Company profile PDF — other assumptions** — the website domain is inferred from the contact address; the 2019, 2021 and 2023 milestones are inferred from the portfolio (the 2019 one is what page 8's "shipping ML in production since 2019" refers to — move one and you must move the other); the CEO name, two of the three testimonials and the accreditations inherit the demo content already flagged in `about.ts`, `content.ts` and `trust.ts`. The office photograph on page 4 was supplied for this profile — confirm you hold the rights to it.
 - [ ] **Tech stacks in the case studies** (`src/data/projects.ts → stack`) — Beretta and Bay Smokes come from the write-ups in `reference/`; the other sixteen are inferred from the scope text. Confirm each.
 
 ## Before going live — checklist
 
 - [ ] Replace `hello@keelframe.org` in `src/data/site.ts`
 - [ ] Confirm the website domain the company profile PDF prints (`keelframe.org`)
-- [ ] Reconcile the company profile PDF's headline figures with the website's
 - [ ] Optional: add real headshots, client logos and certification marks — the profile falls back to initials, wordmarks and drawn badges without them
 - [ ] Decide how the contact form is delivered (`formEndpoint`) and whether to use a booking tool (`bookingUrl`)
 - [ ] Work through the demo-content list above

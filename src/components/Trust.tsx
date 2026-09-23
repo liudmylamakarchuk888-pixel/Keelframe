@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import { clients, accreditations } from '../data/trust';
-import { projects } from '../data/projects';
 import { site } from '../data/site';
 
 const years = new Date().getFullYear() - site.founded;
 
+// These are the company profile's headline figures — keep the two in step
+// (sampleProfile.ts: glance, keyNumbers, ceo.highlights).
 const numbers = [
-  { v: '50+', k: 'Products shipped' },
+  { v: '250+', k: 'Projects delivered' },
+  { v: '120+', k: 'Engineers & specialists' },
   { v: `${years} yrs`, k: `In business since ${site.founded}` },
-  { v: String(projects.length) + "+", k: 'Representative Projects' },
   { v: '100%', k: 'Code owned by clients' },
 ];
 

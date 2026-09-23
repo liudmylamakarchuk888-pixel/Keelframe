@@ -87,8 +87,8 @@ export const sampleProfile: CompanyProfile = {
     ],
   },
 
-  // DEMO: supplied figures. The site's own trust strip quotes 50+ products
-  // shipped and 18 portfolio projects; these are the wider delivery numbers.
+  // DEMO: supplied figures. The website quotes the same set — Trust.tsx and
+  // about.ts → numbers — so move these and you must move those too.
   glance: [
     { value: `${yearsTrading}+`, label: 'Years in business' },
     { value: '250+', label: 'Projects delivered' },
@@ -125,7 +125,8 @@ export const sampleProfile: CompanyProfile = {
   about: {
     lead: 'We design and build AI features, web platforms, mobile apps, 3D experiences, Shopify stores, marketplaces and betting platforms — scoped in writing, delivered on a date, and owned by you from the first commit.',
     coreServices: 'AI, web, mobile, Shopify, marketplaces, betting',
-    otherOffices: 'Remote · UK, EU and Asia',
+    // Page 19 and careers.ts both say UK and EU — keep the three in step.
+    otherOffices: 'Remote · UK and EU',
     vision:
       'To be the studio founders come back to — known for software that is still standing when the tenth feature lands.',
     mission:
@@ -140,14 +141,18 @@ export const sampleProfile: CompanyProfile = {
     wideImageUrl: asset('office-wide.jpg'),
   },
 
-  // DEMO: the founding year is real; the 2021 and 2023 entries are inferred
-  // from the portfolio. Confirm the dates before this goes out.
+  // DEMO: the founding year is real; the 2019, 2021 and 2023 entries are
+  // inferred from the portfolio. Confirm the dates before this goes out.
+  //
+  // The 2019 entry is what page 8 refers to when it says we have been shipping
+  // ML in production since 2019 — keep the two in step if either moves.
   milestones: [
     { year: String(site.founded), title: 'Keelframe founded', text: 'A London studio built on one habit: the scope is written down before anything starts.' },
+    { year: '2019', title: 'First ML models in production', text: 'Forecasting, classification and ranking shipped inside client products, years before AI became a line item.' },
     { year: '2021', title: 'Shopify Plus practice', text: 'High-volume storefronts for DTC brands, including Bay Smokes and Sparkle In Pink.' },
-    { year: '2023', title: 'AI and 3D practices open', text: 'LLM features, retrieval pipelines and the real-time WebGL configurator built for Beretta.' },
-    { year: '2024', title: 'Health and wellness at scale', text: 'Clementine, Lost and Found Crew and My Best Mood ship to the App Store and Google Play.' },
-    { year: '2025', title: 'FinTech, Web3 and marketplaces', text: 'Gather reaches both app stores FCA-ready; Loom, Sinq and Mosaic go live the same year.' },
+    { year: '2023', title: 'LLM and 3D practices open', text: 'Language-model features and retrieval pipelines join the ML work, alongside the real-time WebGL configurator built for Beretta.' },
+    { year: '2024', title: 'Consumer apps at scale', text: 'Clementine, Lost and Found Crew and My Best Mood ship to the App Store and Google Play.' },
+    { year: '2025', title: 'FinTech, Web3 and B2B platforms', text: 'Gather reaches both app stores FCA-ready; Loom, Mosaic and the Sinq construction platform go live the same year.' },
     { year: String(site.year), title: 'Today', text: '120+ engineers and specialists, 250+ projects delivered, and every client still owning their code.' },
   ],
 
@@ -155,7 +160,7 @@ export const sampleProfile: CompanyProfile = {
     { value: '250+', label: 'Projects delivered' },
     { value: '120+', label: 'Engineers & specialists' },
     { value: '15', label: 'Countries served' },
-    { value: `${services.length}`, label: 'Services under one contract' },
+    { value: `${services.length}`, label: 'Services, one team' },
     { value: '100%', label: 'Code owned by clients' },
     { value: '95%', label: 'Clients who come back' },
   ],
@@ -231,7 +236,7 @@ export const sampleProfile: CompanyProfile = {
   ],
 
   ai: {
-    lead: 'We have shipped AI since before it was a line item — aging-clock models for Rejuve.AI, an AI-assisted loan reviewer for a regional bank, adaptive storytelling for children. We work at whichever layer the problem needs, and we say which one that is before anything is built.',
+    lead: 'We have been shipping machine learning in production since 2019, long before AI was a line item — aging-clock models for Rejuve.AI, AI matchmaking for Chance.ai, adaptive storytelling for children. We work at whichever layer the problem needs, and we say which one that is before anything is built.',
     capabilities: [
       {
         icon: 'ai-chip',
@@ -312,7 +317,7 @@ export const sampleProfile: CompanyProfile = {
         text: 'Open-weight models served inside your VPC, so prompts and documents never leave your account or your region.',
       },
       {
-        title: 'On-premise',
+        title: 'On-premises',
         text: 'Quantised models on your own GPUs for air-gapped environments, health data and anything that cannot go to a third party.',
       },
     ],
@@ -326,7 +331,7 @@ export const sampleProfile: CompanyProfile = {
       { value: '6', label: 'Layers of the stack we work at' },
       { value: '2019', label: 'Shipping ML in production since' },
       { value: '100%', label: 'AI features shipped with an eval set' },
-      { value: '3', label: 'Deployment models, including on-premise' },
+      { value: '3', label: 'Deployment models, including on-premises' },
     ],
   },
 
@@ -561,7 +566,7 @@ export const sampleProfile: CompanyProfile = {
     stats: [
       { value: '72', label: 'Software engineers' },
       { value: '16', label: 'QA & test engineers' },
-      { value: '5', label: 'UI/UX designers' },
+      { value: '14', label: 'UI/UX designers' },
       { value: '18', label: 'Project & product managers' },
     ],
   },
@@ -585,7 +590,7 @@ export const sampleProfile: CompanyProfile = {
       'Repositories and cloud accounts are yours',
       'OWASP basics built into every web build',
       'KYC, AML and geofencing where the market needs it',
-      `Built with GDPR requirements in mind`,
+      'Built with GDPR requirements in mind',
     ],
     whyUs: [
       { title: principles[0].title, text: 'What we build, when, what it costs and what is out — agreed before anything starts.' },

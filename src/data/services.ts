@@ -113,7 +113,7 @@ export const services: Service[] = [
     breaks:
       'Packaged software rarely fits a complex business. Workarounds pile up until the tool dictates how the company works, instead of the other way round.',
     points: [
-      { title: 'Architecture shaped to your data', text: "Systems designed around your real workflows and data models, not a vendor's template." },
+      { title: 'Architecture shaped to your data', text: "Systems designed around your real workflows and data models, not a vendor’s template." },
       { title: 'Integrated, not isolated', text: 'Connected to the tools your team already uses, with the messy legacy parts handled properly.' },
       { title: 'Security to your standard', text: 'Access control, audit trails and compliance designed around your actual obligations.' },
       { title: 'No artificial ceilings', text: 'When the business grows, the software grows with it. No seat limits, no usage tiers.' },
@@ -134,7 +134,7 @@ export const services: Service[] = [
     points: [
       { title: 'Custom themes, not app soup', text: 'Liquid and Hydrogen themes built to your brand, with the app count kept to what earns its place. Fewer scripts, faster pages, higher conversion.' },
       { title: 'Built for the sale, not just the shelf', text: 'Bundles, subscriptions, loyalty, size guides and reviews designed into the buying flow and tested against real customer behaviour.' },
-      { title: 'Wired into your operations', text: "ERP, 3PL, POS and marketing tools connected through Shopify's APIs — inventory, orders and customers in sync without spreadsheets." },
+      { title: 'Wired into your operations', text: "ERP, 3PL, POS and marketing tools connected through Shopify’s APIs — inventory, orders and customers in sync without spreadsheets." },
       { title: 'Migrated without losing rank', text: 'Moving from WooCommerce, Magento or a legacy platform with products, customers, order history and SEO redirects intact.' },
     ],
     stack: ['Shopify Plus', 'Liquid', 'Hydrogen', 'Shopify Functions', 'Storefront API', 'Klaviyo', 'Recharge', 'GraphQL'],
@@ -187,7 +187,7 @@ export const services: Service[] = [
     intro:
       'Token economies, wallets and on-chain features built into products people actually use — where the chain does one job well and the rest is ordinary, reliable software.',
     breaks:
-      'Web3 products fail in two ways. Everything is on-chain, so every click costs gas and takes eight seconds; or the token is bolted onto an app that would be better without it. Either way, users leave at the wallet prompt.',
+      'Web3 products fail in two ways. Either everything is on-chain, so every click costs gas and takes eight seconds, or the token is bolted onto an app that would be better without it. Either way, users leave at the wallet prompt.',
     points: [
       { title: 'On-chain only where it earns its place', text: 'Ownership, rewards and settlement on-chain; everything else off-chain and fast. We draw that line in the scope document, not in production.' },
       { title: 'Wallets people can use', text: 'Embedded wallets, social login and gasless transactions, so a first-time user never sees a seed phrase unless they ask for one.' },

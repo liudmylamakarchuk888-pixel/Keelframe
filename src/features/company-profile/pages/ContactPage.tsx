@@ -111,7 +111,7 @@ export function ContactPage({ profile }: { profile: CompanyProfile }) {
             maxWidth: mm(155),
           }}
         >
-          {contact.headline ?? "Let's build something great together."}
+          {contact.headline ?? "Let’s build something great together."}
         </Text>
         <View style={{ marginTop: mm(6), maxWidth: mm(140) }}>
           <Ph

@@ -14,7 +14,7 @@ export const exploreAI: ExploreItem[] = [
   { icon: 'compass', title: 'AI Consulting', subject: 'AI consulting', text: 'Strategy, roadmaps and build-versus-buy decisions from engineers who ship, not analysts who forecast.' },
   { icon: 'sparkle', title: 'Generative AI', subject: 'Generative AI', text: 'Text, image and code generation features that are evaluated, costed and monitored before users ever see them.' },
   { icon: 'scatter', title: 'Machine Learning', subject: 'Machine learning', text: 'Classical models — forecasting, classification, ranking — for the many problems where a language model is the wrong tool.' },
-  { icon: 'doc', title: 'RAG Development', subject: 'RAG', text: "Retrieval pipelines that ground every answer in your verified documents instead of the model's memory." },
+  { icon: 'doc', title: 'RAG Development', subject: 'RAG', text: "Retrieval pipelines that ground every answer in your verified documents instead of the model’s memory." },
   { icon: 'route', title: 'LLM Integration', subject: 'LLM integration', text: 'Claude, GPT and open-weight models routed per task on accuracy, cost and latency — and swapped when a better one arrives.' },
   { icon: 'nodes', title: 'AI Agents', subject: 'AI agents', text: 'Multi-step agents with explicit tools, limits and approvals, built for tasks where a wrong action has consequences.' },
 ];
@@ -84,7 +84,7 @@ export const testimonials: Testimonial[] = [
   {
     tag: 'Gather · FinTech',
     quote:
-      "The team has been instrumental in driving both the design and development of Gather, pairing a proactive, highly responsive workflow with the technical depth needed to handle our platform's complexity. Their partnership continues to move the product forward in a reliable and impactful way.",
+      "The team has been instrumental in driving both the design and development of Gather, pairing a proactive, highly responsive workflow with the technical depth needed to handle our platform’s complexity. Their partnership continues to move the product forward in a reliable and impactful way.",
     name: 'Chris Jones',
     role: 'Chief Product Officer, Gather',
   },
