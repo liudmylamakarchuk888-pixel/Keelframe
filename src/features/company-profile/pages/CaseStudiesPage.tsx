@@ -22,6 +22,12 @@ function Column({ label, value }: { label: string; value?: string }) {
  * instead of a 40mm gutter.
  */
 function CaseStudyCard({ study }: { study: ProfileCaseStudy }) {
+  const results = (study.results ?? []).slice(0, 3);
+  // A result value is a word or two, not just a number ("FCA Ready", "50 States"),
+  // and the three columns are ~27mm wide. The longest value in the row sets the
+  // size for all three, so they stay level and none of them wraps.
+  const statSize = Math.max(0, ...results.map((r) => (r.value ?? '').length)) > 7 ? 13 : 16;
+
   return (
     <Card style={{ height: mm(100), padding: 0, flexDirection: 'row', overflow: 'hidden' }}>
       {study.imageUrl ? (
@@ -71,9 +77,9 @@ function CaseStudyCard({ study }: { study: ProfileCaseStudy }) {
             flexDirection: 'row',
           }}
         >
-          {(study.results ?? []).slice(0, 3).map((result, i) => (
+          {results.map((result, i) => (
             <View key={i} style={{ flex: 1, paddingRight: mm(2.5) }}>
-              <Text style={{ fontWeight: 600, fontSize: 16, color: color.navy }}>
+              <Text style={{ fontWeight: 600, fontSize: statSize, color: color.navy }}>
                 {result.value ?? ''}
               </Text>
               <Text style={{ marginTop: mm(1.2), fontSize: 7.2, lineHeight: 1.3, color: color.ink2 }}>

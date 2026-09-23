@@ -138,7 +138,7 @@ export function About() {
               </address>
               <p>{site.hours}<br />We reply {site.responseTime}.</p>
               <p>
-                <a href={`mailto:${site.email}`}>{site.email}</a> · <a href={site.phoneHref}>{site.phone}</a> · <a href={site.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
               </p>
               <p><Link to="/contact">Contact form and map →</Link></p>
               <p style={{ marginTop: 18 }}>

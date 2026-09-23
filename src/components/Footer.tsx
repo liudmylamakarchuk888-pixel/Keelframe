@@ -20,11 +20,10 @@ export function Footer() {
                   <br />
                 </span>
               ))}
-              <a href={site.phoneHref}>{site.phone}</a>
-              <br />
+              {/* <a href={site.phoneHref}>{site.phone}</a>
+              <br /> */}
               <a href={`mailto:${site.email}`}>{site.email}</a>
-              <br />
-              <a href={site.whatsapp} target="_blank" rel="noopener">WhatsApp</a>
+              {/* <a href={site.whatsapp} target="_blank" rel="noopener">WhatsApp</a> */}
             </address>
             <p className="foot-hours">{site.hours}</p>
           </div>

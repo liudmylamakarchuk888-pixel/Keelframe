@@ -260,14 +260,10 @@ export function Contact() {
               <div className="k">Email</div>
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </div>
-            <div className="contact-item">
-              <div className="k">Phone</div>
-              <a href={site.phoneHref}>{site.phone}</a>
-            </div>
-            <div className="contact-item">
+            {/* <div className="contact-item">
               <div className="k">WhatsApp</div>
               <a href={site.whatsapp} target="_blank" rel="noopener">Message us on WhatsApp</a>
-            </div>
+            </div> */}
             <div className="contact-item">
               <div className="k">Hours</div>
               <p>

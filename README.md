@@ -153,7 +153,7 @@ Build these links with `contactLink({ intent, service, re })` from `src/data/sit
 
 ## Editing content
 
-- **Contact details** — `src/data/site.ts`: email, phone, WhatsApp link, address, hours, response time, social handles.
+- **Contact details** — `src/data/site.ts`: email, address, hours, response time, social handles. (Phone and WhatsApp are commented out — uncomment the fields there and their uses in `Footer.tsx`, `Contact.tsx`, `About.tsx` and the profile's `ContactPage.tsx` to bring them back.)
 - **Legal entity** — `src/data/site.ts → legal`: company name, registration number, VAT number, ICO registration and registered office. Shown in the footer and on the Privacy and Terms pages.
 - **Add a portfolio project** — add an object to `src/data/projects.ts` and drop its image into `public/img/`. Set `kind` to `app`, `web`, `shopify` or `betting` and it appears under the right filter; add `tags` (any of `ai`, `3d`, `web3`, `marketplace`) to list it under those topic filters as well. Give it a `stack` (shown in the case study) and, if the closest service is not the one implied by its kind, a `service` id so "Discuss a similar build" pre-selects the right service. Projects without an `img` get a branded placeholder tile (add `tint` colours). Sites with a `url` show a "Visit site" button.
 - **Portfolio images** — 1600×1067 (3:2) `.webp`. For a plain browser screenshot, frame it the way the Rejuve.AI, Beretta, Bay Smokes and Petify tiles were made: a brand-tinted background with the screenshot in a browser window.
@@ -194,7 +194,6 @@ The site is filled in so it can be shown to clients. The following is demo conte
 - [ ] **Two testimonials** (`src/data/content.ts`) — the Loom and Sinq quotes are written for the demo and attributed to invented people. The Gather quote is real.
 - [ ] **Accreditations** (`src/data/trust.ts`) — Shopify Partner, AWS Partner, Cyber Essentials and ICO registration are assumed. Confirm or delete each one.
 - [ ] **Company registration details** (`src/data/site.ts → legal`) — company number, VAT number and ICO number are invented placeholders.
-- [ ] **WhatsApp number** (`src/data/site.ts`) — assumed to be the office line.
 - [ ] **Careers** (`src/data/careers.ts`) — the three open roles and the benefits are invented.
 - [ ] **Social links** (`src/data/site.ts`) — assumed handles (`/keelframe`); confirm or replace.
 - [ ] **Privacy policy and Terms** (`src/pages/Privacy.tsx`, `src/pages/Terms.tsx`) — generic UK wording; have both reviewed.

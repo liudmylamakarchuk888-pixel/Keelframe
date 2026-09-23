@@ -161,7 +161,7 @@ export function ContactPage({ profile }: { profile: CompanyProfile }) {
       >
         <View style={{ width: mm(68) }}>
           <FootItem label="EMAIL" value={c.email} ph="hello@yourcompany.com" />
-          <FootItem label="PHONE" value={c.phone} ph="+00 00 0000 0000" />
+          {/* <FootItem label="PHONE" value={c.phone} ph="+00 00 0000 0000" /> */}
           <FootItem label="BUSINESS HOURS" value={c.hours} ph="Mon–Fri, 9:00–18:00" />
         </View>
         <View style={{ width: mm(68) }}>

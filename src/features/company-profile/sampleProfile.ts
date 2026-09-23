@@ -67,7 +67,7 @@ export const sampleProfile: CompanyProfile = {
     // DEMO: the domain is assumed from the contact address (hello@keelframe.org).
     website: 'keelframe.org',
     email: site.email,
-    phone: site.phone,
+    // phone: site.phone,
     hours: 'Mon–Fri, 9:00–18:00 UK time',
     linkedin: 'linkedin.com/company/keelframe',
     hq: 'London, United Kingdom',
@@ -148,7 +148,7 @@ export const sampleProfile: CompanyProfile = {
     { year: '2021', title: 'Shopify Plus practice', text: 'High-volume storefronts for DTC brands, including Bay Smokes and Sparkle In Pink.' },
     { year: '2023', title: 'AI and 3D practices open', text: 'LLM features, retrieval pipelines and the real-time WebGL configurator built for Beretta.' },
     { year: '2024', title: 'Health and wellness at scale', text: 'Clementine, Lost and Found Crew and My Best Mood ship to the App Store and Google Play.' },
-    { year: '2025', title: 'FinTech, Web3 and marketplaces', text: 'Gather reaches both stores FCA-compliant; Loom, Sinq and Mosaic go live the same year.' },
+    { year: '2025', title: 'FinTech, Web3 and marketplaces', text: 'Gather reaches both app stores FCA-ready; Loom, Sinq and Mosaic go live the same year.' },
     { year: String(site.year), title: 'Today', text: '120+ engineers and specialists, 250+ projects delivered, and every client still owning their code.' },
   ],
 
@@ -343,7 +343,7 @@ export const sampleProfile: CompanyProfile = {
     { title: 'Gaming & marketplaces', text: 'Two-sided marketplaces with escrow and payouts' },
     { title: 'Web3 & blockchain', text: 'Wallets, token rewards and on-chain ownership' },
     { title: 'Health tech', text: 'Patient-facing apps, wearables and health data' },
-    { title: 'Fintech', text: 'FCA-compliant investing, payments and ledgers' },
+    { title: 'Fintech', text: 'FCA-ready investing, payments and ledgers' },
     { title: 'Property & construction', text: 'Operations platforms, analytics and approvals' },
     { title: 'SaaS & B2B software', text: 'Bespoke platforms for businesses that outgrew tools' },
   ],
@@ -439,13 +439,13 @@ export const sampleProfile: CompanyProfile = {
       duration: '6 months',
       title: 'An FCA-authorised investment app',
       challenge:
-        'Traditional investment platforms feel complex and intimidating. First-time investors wanted clarity and guidance, inside a product that had to satisfy FCA requirements from day one.',
+        'Investment platforms can feel complex and intimidating to first-time investors. The goal was a simple, engaging experience with clear guidance that met strict FCA requirements from day one.',
       solution:
-        'iOS and Android apps with multi-currency portfolios, curated expert-managed strategies, a learning feed and a community network — built to FCA compliance standards.',
+        'Native-quality iOS and Android apps with multi-currency portfolios, curated expert-managed strategies, an educational feed and a community network — compliance and security at the core.',
       results: [
-        { value: '6 mo', label: 'From first call to both app stores' },
-        { value: '8 wks', label: 'To a seed round after launch' },
-        { value: 'FCA', label: 'Compliant from day one' },
+        { value: '6 months', label: 'From discovery to launch on both app stores' },
+        { value: '8 weeks', label: 'From launch to a seed funding round' },
+        { value: 'FCA Ready', label: 'Compliance requirements built in from day one' },
       ],
       tech: project('gather').stack.slice(0, 4).join(' · '),
       imageUrl: projectImage(project('gather').img),
@@ -454,17 +454,19 @@ export const sampleProfile: CompanyProfile = {
       industry: 'Shopify · Retail',
       region: 'US',
       duration: 'Live',
-      title: 'A hemp storefront serving a million customers',
+      title: 'A high-volume hemp e-commerce store',
       challenge:
-        'A national online dispensary selling at volume in a regulated category, needing mainstream DTC conversion while handling state-by-state shipping rules, lab-test messaging and campaign traffic spikes.',
+        'A national online hemp retailer needed a fast, conversion-focused store in a complex regulatory environment — state-specific shipping, clear lab-test information and campaign traffic spikes.',
       solution:
-        'A custom Shopify theme with a deliberately small app footprint, a loyalty programme, Klaviyo flows and live chat, served from Cloudflare’s edge with HTTP/3 and a strict CSP.',
+        'A custom Shopify storefront with a lightweight app footprint, a loyalty programme, automated Klaviyo journeys and live chat, on Cloudflare’s edge with HTTP/3 and a strict Content Security Policy.',
       results: [
-        { value: '1M+', label: 'Customers served' },
-        { value: 'Edge', label: 'Every page cached at Cloudflare' },
-        { value: '50 st.', label: 'Shipping rules handled at checkout' },
+        { value: '1M+', label: 'Customers served at national scale' },
+        { value: 'Edge', label: 'Pages cached at Cloudflare’s global edge network' },
+        { value: '50 States', label: 'State-specific shipping rules at checkout' },
       ],
-      tech: project('baysmokes').stack.slice(0, 4).join(' · '),
+      // HTTP/3 and the CSP are part of what shipped; Klaviyo is named in the
+      // solution above, so the line stops at five and stays on one row.
+      tech: project('baysmokes').stack.slice(0, 5).join(' · '),
       imageUrl: projectImage(project('baysmokes').img),
       domain: project('baysmokes').domain,
     },
@@ -560,7 +562,7 @@ export const sampleProfile: CompanyProfile = {
     stats: [
       { value: '72', label: 'Software engineers' },
       { value: '16', label: 'QA & test engineers' },
-      { value: '14', label: 'UI/UX designers' },
+      { value: '5', label: 'UI/UX designers' },
       { value: '18', label: 'Project & product managers' },
     ],
   },
@@ -583,8 +585,8 @@ export const sampleProfile: CompanyProfile = {
     security: [
       'Repositories and cloud accounts are yours',
       'OWASP basics built into every web build',
-      'KYC, AML and geo-fencing where the market needs it',
-      `UK ICO registered (${site.legal.ico}), GDPR aligned`,
+      'KYC, AML and geofencing where the market needs it',
+      `Built with GDPR requirements in mind`,
     ],
     whyUs: [
       { title: principles[0].title, text: 'What we build, when, what it costs and what is out — agreed before anything starts.' },
