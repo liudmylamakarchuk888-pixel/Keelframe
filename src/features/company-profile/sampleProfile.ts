@@ -69,7 +69,6 @@ export const sampleProfile: CompanyProfile = {
     email: site.email,
     // phone: site.phone,
     hours: 'Mon–Fri, 9:00–18:00 UK time',
-    linkedin: 'linkedin.com/company/keelframe',
     hq: 'London, United Kingdom',
     registrationNo: site.legal.companyNumber,
     foundedYear: String(site.founded),

@@ -166,7 +166,6 @@ export function ContactPage({ profile }: { profile: CompanyProfile }) {
         </View>
         <View style={{ width: mm(68) }}>
           <FootItem label="WEBSITE" value={c.website} ph="www.yourcompany.com" />
-          <FootItem label="LINKEDIN" value={c.linkedin} ph="linkedin.com/company/you" />
           <FootItem label="COMPANY" value={c.legalName} ph="Company Legal Name Co., Ltd." />
         </View>
         <View style={{ flex: 1, alignItems: 'flex-end' }}>

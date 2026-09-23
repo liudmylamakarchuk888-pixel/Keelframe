@@ -44,7 +44,6 @@ export const site = {
 
   // DEMO: assumed handles so the footer links work in client demos — confirm or replace before launch.
   social: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/keelframe' },
     { label: 'X', href: 'https://x.com/keelframe' },
     { label: 'Instagram', href: 'https://www.instagram.com/keelframe' },
   ],

@@ -32,8 +32,6 @@ export interface ProfileCompany {
   phone?: string;
   /** max 30 chars */
   hours?: string;
-  /** max 40 chars */
-  linkedin?: string;
   /** max 26 chars — "City, Country". */
   hq?: string;
   /** max 22 chars */
