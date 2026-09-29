@@ -7,8 +7,8 @@ const years = new Date().getFullYear() - site.founded;
 // These are the company profile's headline figures — keep the two in step
 // (sampleProfile.ts: glance, keyNumbers, ceo.highlights).
 const numbers = [
-  { v: '250+', k: 'Projects delivered' },
-  { v: '120+', k: 'Engineers & specialists' },
+  { v: '500+', k: 'Projects delivered' },
+  { v: '1500+', k: 'Engineers & specialists' },
   { v: `${years} yrs`, k: `In business since ${site.founded}` },
   { v: '100%', k: 'Code owned by clients' },
 ];

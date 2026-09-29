@@ -69,7 +69,7 @@ export function AboutPage({ profile }: { profile: CompanyProfile }) {
             <Ph value={about.otherOffices} label="City, City" style={value} />
           </Row>
           <Row label="Team size">
-            <Ph value={c.teamSize} label="120+ full-time professionals" style={value} />
+            <Ph value={c.teamSize} label="1500+ full-time professionals" style={value} />
           </Row>
           <Row label="Core services">
             <Ph value={about.coreServices} label="Your four core services" style={value} />

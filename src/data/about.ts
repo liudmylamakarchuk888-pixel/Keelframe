@@ -8,8 +8,8 @@ export const aboutHero = {
 };
 
 export const numbers = [
-  { v: '250+', k: 'Projects delivered' },
-  { v: '120+', k: 'Engineers & specialists' },
+  { v: '500+', k: 'Projects delivered' },
+  { v: '1500+', k: 'Engineers & specialists' },
   { v: '100%', k: 'Code owned by clients' },
   { v: 'London', k: 'HQ · remote worldwide' },
 ];

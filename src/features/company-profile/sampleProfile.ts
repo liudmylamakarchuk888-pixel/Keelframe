@@ -73,7 +73,7 @@ export const sampleProfile: CompanyProfile = {
     registrationNo: site.legal.companyNumber,
     foundedYear: String(site.founded),
     // DEMO: supplied headcount, not derived from this repo.
-    teamSize: '120+ engineers & specialists',
+    teamSize: '1500+ engineers & specialists',
     bookingUrl: site.bookingUrl || 'keelframe.org/#/contact',
     kicker: 'Product engineering studio',
     serviceTags: ['AI Development', 'Web Platforms', 'Mobile Apps', 'Shopify', 'Betting Platforms'],
@@ -91,8 +91,8 @@ export const sampleProfile: CompanyProfile = {
   // about.ts → numbers — so move these and you must move those too.
   glance: [
     { value: `${yearsTrading}+`, label: 'Years in business' },
-    { value: '250+', label: 'Projects delivered' },
-    { value: '120+', label: 'Engineers & specialists' },
+    { value: '500+', label: 'Projects delivered' },
+    { value: '1500+', label: 'Engineers & specialists' },
     { value: '15', label: 'Countries served' },
   ],
 
@@ -107,10 +107,10 @@ export const sampleProfile: CompanyProfile = {
       plain(story[0]),
       'Get the structure right early, in writing, with the people who will actually build it, and the tenth feature ships as smoothly as the first. Skip it and every release gets slower until someone proposes a rewrite.',
       'So the studio runs on a few fixed habits: a written scope before anything starts, a working pilot in week one, a demo every week, and code that lives in your repositories and your cloud accounts from day one.',
-      'Two hundred and fifty projects later, that is still the whole method. This profile sets out what we build, how we work and who you would be working with. I look forward to the conversation.',
+      'Five hundred projects later, that is still the whole method. This profile sets out what we build, how we work and who you would be working with. I look forward to the conversation.',
     ],
     highlights: [
-      { value: '250+', label: 'Projects delivered since 2018' },
+      { value: '500+', label: 'Projects delivered since 2018' },
       { value: '15', label: 'Countries served' },
       { value: '100%', label: 'Code owned by clients' },
     ],
@@ -153,12 +153,12 @@ export const sampleProfile: CompanyProfile = {
     { year: '2023', title: 'LLM and 3D practices open', text: 'Language-model features and retrieval pipelines join the ML work, alongside the real-time WebGL configurator built for Beretta.' },
     { year: '2024', title: 'Consumer apps at scale', text: 'Clementine, Lost and Found Crew and My Best Mood ship to the App Store and Google Play.' },
     { year: '2025', title: 'FinTech, Web3 and B2B platforms', text: 'Gather reaches both app stores FCA-ready; Loom, Mosaic and the Sinq construction platform go live the same year.' },
-    { year: String(site.year), title: 'Today', text: '120+ engineers and specialists, 250+ projects delivered, and every client still owning their code.' },
+    { year: String(site.year), title: 'Today', text: '1500+ engineers and specialists, 500+ projects delivered, and every client still owning their code.' },
   ],
 
   keyNumbers: [
-    { value: '250+', label: 'Projects delivered' },
-    { value: '120+', label: 'Engineers & specialists' },
+    { value: '500+', label: 'Projects delivered' },
+    { value: '1500+', label: 'Engineers & specialists' },
     { value: '15', label: 'Countries served' },
     { value: `${services.length}`, label: 'Services, one team' },
     { value: '100%', label: 'Code owned by clients' },
@@ -564,7 +564,7 @@ export const sampleProfile: CompanyProfile = {
     ],
     // DEMO: supplied breakdown of the 120+ headcount.
     stats: [
-      { value: '72', label: 'Software engineers' },
+      { value: '1500+', label: 'Software engineers' },
       { value: '16', label: 'QA & test engineers' },
       { value: '14', label: 'UI/UX designers' },
       { value: '18', label: 'Project & product managers' },
